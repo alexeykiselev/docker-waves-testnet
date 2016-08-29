@@ -62,7 +62,7 @@ If you built the image by yourself it will have the name you gave to it (in our 
 To start a new Docker container, please, execute:
 
 ```
-docker run -n waves-testnet wavesplatform/waves-testnet:latest
+docker run --name waves-testnet wavesplatform/waves-testnet:latest
 
 ```
 
@@ -73,9 +73,9 @@ This image defines a storage volume in folder `/waves`. This folder is persisted
 Alternatively you can map the volume on a host folder using option `-v` as in:
 
 ```
-docker run -n waves-testnet -v /home/user/local-waves-folder:/waves wavesplatform/waves-testnet:latest
+docker run --name waves-testnet -v /home/user/local-waves-folder:/waves wavesplatform/waves-testnet:latest
 ```
 
 At first run a new wallet seed will be created for you and stored in `waves-testnet.json` configuration file on the volume.
 
-To start and stop the container use Docker commands `docker start waves-testnet` and `docker stop waves-testnet`. We address the container by its name which we gave to it in the `-n` option of the `run` command.
+To start and stop the container use Docker commands `docker start waves-testnet` and `docker stop waves-testnet`. We address the container by its name which we gave to it in the `--name` option of the `run` command.
