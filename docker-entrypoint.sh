@@ -10,7 +10,7 @@ if [ ! -f /waves/waves-testnet.json ]; then
 	export NEWSEED=`newBitcoinKey | grep address | cut -c 27- | head -1`
 	echo "New seed: $NEWSEED"
 
-	sed "s/\"walletSeed\": \"\",/\"walletSeed\": \"$NEWSEED\",/g;s+/tmp/scorex++g" /build/waves-testnet.json > /waves/waves-testnet.json
+	sed "s/\"walletSeed\": \"\",/\"walletSeed\": \"$NEWSEED\",/g;s+/tmp/scorex++g;s/127.0.0.1/0.0.0.0/g" /build/waves-testnet.json > /waves/waves-testnet.json
 
 	mv /build/waves.jar /waves/
 
