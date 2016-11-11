@@ -4,7 +4,7 @@ MAINTAINER Alexey Kiselev <alexey.kiselev@gmail.com>
 
 EXPOSE 6869 6868
 
-ENV WAVES_VERSION v0.3.1
+ENV WAVES_VERSION v0.3.3
 
 RUN mkdir /build /waves
 
